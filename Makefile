@@ -9,4 +9,4 @@ down:
 	docker compose down
 
 clear:
-	docker compose -v --rmi all
+	docker compose down -v --rmi all
