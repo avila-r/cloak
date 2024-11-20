@@ -1,0 +1,12 @@
+services:
+  # Login to admin console:
+  # http://localhost:8080/
+  keycloak:
+    ports:
+      - 8080:8080
+    container_name: keycloak
+    image: quay.io/keycloak/keycloak
+    environment:
+      - KC_BOOTSTRAP_ADMIN_USERNAME=${KEYCLOAK_USER}
+      - KC_BOOTSTRAP_ADMIN_PASSWORD=${KEYCLOAK_PASSWORD}
+    command: start-dev
